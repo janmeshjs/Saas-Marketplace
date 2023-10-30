@@ -1,4 +1,3 @@
-// frontend/saas-marketplace-app/src/components/Header.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Button } from '@mui/material';
@@ -13,7 +12,7 @@ const Header = () => {
         <Button color="inherit" component={Link} to="/">
           Home
         </Button>
-        {/* Add more navigation buttons as needed */}
+        <Button color="inherit" component={Link} to="/products"></Button>
       </Toolbar>
     </AppBar>
   );
