@@ -1,4 +1,3 @@
-// frontend/saas-marketplace-app/src/components/Layout.js
 import React from 'react';
 import Header from './Header';
 import Container from '@mui/material/Container';
