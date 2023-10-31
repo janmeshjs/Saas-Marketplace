@@ -1,4 +1,3 @@
-// frontend/saas-marketplace-app/src/pages/Home.js
 import React from 'react';
 import ProductList from '../components/ProductList'; // Update the import path
 
