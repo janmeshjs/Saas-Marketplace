@@ -1,4 +1,3 @@
-// frontend/saas-marketplace-app/src/pages/Register.js
 import React, { useState } from 'react';
 import { TextField, Button, Typography } from '@mui/material';
 import axios from 'axios';
