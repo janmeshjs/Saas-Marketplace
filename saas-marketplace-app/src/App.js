@@ -35,4 +35,3 @@ const App = () => {
 };
 
 export default App;
-//update the path to the private route component
