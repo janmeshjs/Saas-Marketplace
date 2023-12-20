@@ -7,7 +7,8 @@ const cors = require('cors');
 const database = require('./database');
 const passport = require('./passport'); // Add this line
 const session = require('express-session'); // Add this line
-
+const { initializeSocketServer } = require('./socketServer'); // Add this line
+const http = require('http');
 
 require('dotenv').config();
 const app = express();
@@ -66,6 +67,11 @@ app.use((err, req, res, next) => {
 app.use((req, res) => {
   res.status(404).send('Not Found');
 });
+
+// Create HTTP server
+const server = http.createServer(app);
+initializeSocketServer(server); // Initialize WebSocket server
+
 
 // Start the server
 const PORT = process.env.PORT || 3000;

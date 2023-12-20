@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+// frontend/saas-marketplace-app/src/App.js
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import Register from './pages/Register';
+import Login from './pages/Login';
+import PrivateRoute from './components/PrivateRoute';
 
-function App() {
+const theme = createTheme();
+
+const App = () => {
+  const [token, setToken] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/register" element={<Register />} />
+            <Route
+              path="/login"
+              element={<Login setToken={setToken} />}
+            />
+            <Route
+              path="/dashboard"
+              element={<PrivateRoute isAuthenticated={Boolean(token)} />}
+            />
+          </Routes>
+        </Layout>
+      </Router>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;

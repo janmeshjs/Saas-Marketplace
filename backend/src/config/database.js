@@ -2,10 +2,12 @@
 
 const mongoose = require('mongoose');
 const User = require('../models/User'); // Import the User model
-
+require('dotenv').config();
+const uri = process.env.MONGODB_URI;
+console.log(process.env.MONGODB_URI);
 const init = () => {
   // Connect to your MongoDB database
-  mongoose.connect(process.env.MONGODB_URI, {
+  mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
