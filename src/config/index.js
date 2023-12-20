@@ -20,13 +20,16 @@ database.init();
 // Routes (You'll define routes in the routes directory)
 const userRoutes = require('../routes/userRoutes'); // Import userRoutes
 const productRoutes = require('../routes/productRoutes');
+const wishlistRoutes = require('../routes/wishlistRoutes');
+const reviewRoutes = require('../routes/reviewRoutes'); // Add this line
+const subscriptionRoutes = require('../routes/subscriptionRoutes'); // Add this line
 
 // Use routes
-console.log('Before userRoutes');
 app.use('/api/users', userRoutes);
-console.log('After userRoutes');
-
 app.use('/api/products', productRoutes);
+app.use('/api/wishlist', wishlistRoutes);
+app.use('/api/reviews', reviewRoutes); // Add this line
+app.use('/api/subscriptions', subscriptionRoutes); // Add this line
 
 
 // Error handling middleware (should be after routes)
