@@ -23,6 +23,8 @@ const productRoutes = require('../routes/productRoutes');
 const wishlistRoutes = require('../routes/wishlistRoutes');
 const reviewRoutes = require('../routes/reviewRoutes'); // Add this line
 const subscriptionRoutes = require('../routes/subscriptionRoutes'); // Add this line
+const activityRoutes = require('../routes/activityRoutes'); // Add this line
+const passwordResetRoutes = require('../routes/passwordResetRoutes'); // Add this line
 
 // Use routes
 app.use('/api/users', userRoutes);
@@ -30,6 +32,8 @@ app.use('/api/products', productRoutes);
 app.use('/api/wishlist', wishlistRoutes);
 app.use('/api/reviews', reviewRoutes); // Add this line
 app.use('/api/subscriptions', subscriptionRoutes); // Add this line
+app.use('/api/activity', activityRoutes); // Add this line
+app.use('/api/password-reset', passwordResetRoutes); // Add this line
 
 
 // Error handling middleware (should be after routes)
