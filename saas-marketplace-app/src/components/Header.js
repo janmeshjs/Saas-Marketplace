@@ -12,6 +12,11 @@ const Header = () => {
         <img src={logo } alt ="LOGO"/>
         <Button color="inherit" component={Link} to="/">
           Home
+        </Button><Button color="inherit" component={Link} to="/products">
+          Products
+        </Button>
+        <Button color="inherit" component={Link} to="/Login">
+          Login/ Signup
         </Button>
         <Button color="inherit" component={Link} to="/wishList">
           Wishlist
