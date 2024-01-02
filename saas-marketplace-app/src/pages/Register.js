@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { TextField, Button, Typography } from '@mui/material';
 import axios from 'axios';
+import '../App.css';
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -21,11 +22,12 @@ const Register = () => {
   };
 
   return (
-    <div>
-      <Typography variant="h4" gutterBottom>
+    
+      <div className="registerContainer">
+     <Typography variant="h4" gutterBottom className="registerTitle">
         Register
       </Typography>
-      <form>
+      <form className="registerForm">
         <TextField
           label="Username"
           variant="outlined"
