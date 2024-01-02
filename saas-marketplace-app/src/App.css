@@ -13,8 +13,8 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.AppBar {
+  background-color: #cdd4e2;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #b9e4f0;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +36,47 @@
     transform: rotate(360deg);
   }
 }
+.layoutBackground {
+  background-image: url('Logos/Background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%; 
+}
+
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+  
+}
+
+
+.footer {
+  background-color: #333; 
+  color: white; 
+  padding: 20px;
+  text-align: center; 
+}
+.registerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.registerTitle {
+  margin-bottom: 20px;
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  }

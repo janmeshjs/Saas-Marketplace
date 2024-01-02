@@ -1,11 +1,11 @@
 import React from 'react';
-import ProductList from '../components/ProductList'; // Update the import path
+
 
 const Home = () => {
   return (
-    <div>
+    <div className="homeContainer">
       <h2>Welcome to the SaaS Marketplace</h2>
-      <ProductList />
+      
     </div>
   );
 };
